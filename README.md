@@ -2,7 +2,6 @@
 
 Flask essential
 
-
 ## installation
 
 Flask dependencies:
@@ -36,3 +35,15 @@ confirm installation
 ## allows port in ufw
 
 ``sudo ufw allows 8000``
+
+## Development environment
+
+export FLASK_ENV=development
+
+## install gunicorn
+
+``pipenv install guinicorn``
+
+run it
+
+``gunicorn "hello:create_app()" -b 0.0.0.0``
