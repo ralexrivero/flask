@@ -47,3 +47,19 @@ export FLASK_ENV=development
 run it
 
 ``gunicorn "hello:create_app()" -b 0.0.0.0``
+
+after blueprint organization
+
+``export FLASK_APP=urlshort``
+``flask run --port 8000``
+
+curl or browser
+[http://192.168.43.88:8000/](http://192.168.43.88:8000/)
+
+nginx config
+
+``sudo vim /etc/nginx/sites-enabled/default``
+
+run constantly even when terminal is closed
+
+``gunicorn "urlshort:create_app()" -b 0.0.0.0 --daemon``
